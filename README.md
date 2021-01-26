@@ -1,4 +1,4 @@
-# Disaster_Response_Pipeline
+# Disaster Response Pipeline
 
 This repository is created as part of 'Disaster Response Pipeline' project of Data Scientist course.
 
@@ -15,6 +15,23 @@ In this project we will be working on developing a classifier which classifies t
 5) process_data.py - This is a Python file which runs the data preparation.
 6) train_classifier.py - This is a Python file which creates the model and saves the model as a pickle file.
 7) run.py - This is a Python file which runs an API to take messages from user and classify the messages.
+
+The Structure of the file is as below:
+
+app
+| - template
+| |- master.html # main page of web app
+| |- go.html # classification result page of web app
+|- run.py # Flask file that runs app
+data
+|- disaster_categories.csv # data to process
+|- disaster_messages.csv # data to process
+|- process_data.py
+|- Disaster_Response.db # database to save clean data to
+models
+|- train_classifier.py
+|- classifier.pkl # saved model
+README.md
 
 # Installations
 
