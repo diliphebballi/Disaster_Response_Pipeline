@@ -18,20 +18,20 @@ In this project we will be working on developing a classifier which classifies t
 
 The Structure of the file is as below:
 
-app
-| - template
-| |- master.html # main page of web app
-| |- go.html # classification result page of web app
-|- run.py # Flask file that runs app
-data
-|- disaster_categories.csv # data to process
-|- disaster_messages.csv # data to process
-|- process_data.py
-|- Disaster_Response.db # database to save clean data to
-models
-|- train_classifier.py
-|- classifier.pkl # saved model
-README.md
+     app
+     | - template
+     | |- master.html # main page of web app
+     | |- go.html # classification result page of web app
+     |- run.py # Flask file that runs app
+     data
+     |- disaster_categories.csv # data to process
+     |- disaster_messages.csv # data to process
+     |- process_data.py
+     |- Disaster_Response.db # database to save clean data to
+     models
+     |- train_classifier.py
+     |- classifier.pkl # saved model
+     README.md
 
 # Installations
 
@@ -39,11 +39,11 @@ This project will require Python V3. The libraries required are numpy, pandas, s
 
 # Instructions
 
-1) Navigate to the data folder and run following command: python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
+1) Navigate to the data folder and run following command: "python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db"
 This takes the 2 files disaster_messages.csv and disaster_categories.csv as inputs and creates a database DisasterResponse.db
-2) Navigate to the model folder and run the following command: python train_classifier.py ../data/DisasterResponse.db classifier.pkl
+2) Navigate to the model folder and run the following command: "python train_classifier.py ../data/DisasterResponse.db classifier.pkl"
 This takes the database table as input and outputs a pickle file.
-3) Navigate to the app folder and run the following command: python run.py
+3) Navigate to the app folder and run the following command: "python run.py"
 This will run the API which takes the message from user and classify the message.
 
 # Acknowledgement
