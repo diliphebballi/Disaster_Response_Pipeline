@@ -39,7 +39,7 @@ This project will require Python V3. The libraries required are numpy, pandas, s
 
 # Instructions
 
-1) Navigate to the data folder and run following command: "python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db"
+1) Navigate to the data folder and run following command: ## python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db ##
 This takes the 2 files disaster_messages.csv and disaster_categories.csv as inputs and creates a database DisasterResponse.db
 2) Navigate to the model folder and run the following command: "python train_classifier.py ../data/DisasterResponse.db classifier.pkl"
 This takes the database table as input and outputs a pickle file.
