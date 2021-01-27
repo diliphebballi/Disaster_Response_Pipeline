@@ -32,6 +32,12 @@ def load_data(database_filepath):
     return X,Y,category_names
 
 def tokenize(text):
+    '''
+    INPUT: takes the text as input
+    Tokenize the text
+    Remove stopwords
+    OUTPUT: Returns clean tokens
+    '''
     # tokenize text and initiate lemmatizer
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
@@ -51,6 +57,11 @@ def tokenize(text):
 
 
 def build_model():
+    '''
+    ML pipeline for classifier
+    Defined parameters to be passed to grid search
+    OUTPUT: Returns the model
+    '''
     pipeline = Pipeline([
         ('features', FeatureUnion([
 
@@ -74,10 +85,19 @@ def build_model():
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    '''
+    INPUT: Model, 20% of the data and categories
+    
+    OUTPUT: Prints the precision, recall and f1-score for the 36 categories
+    '''
     Y_pred = model.predict(X_test)
     print(classification_report(Y_test.values, Y_pred, target_names=category_names))
 
 def save_model(model, model_filepath):
+    '''
+    INPUT: This function takes the model and filepath as input
+    This funtion saves the pickle file for the model in the filepath
+    '''
     pickle.dump(model,open(model_filepath,'wb'))
 
 
